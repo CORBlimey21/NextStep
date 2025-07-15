@@ -29,20 +29,7 @@ NextStep is a smart, personalised study planner built for Junior & Leaving Cert 
 3.	Choose Instant Mode when you want to study — just enter your time and energy, and it’ll tell you what’s next.
 4.	After each session, rate its effectiveness and optionally update your confidence.
 
-🧠 Why It Works
-
-Most students waste time figuring out what to study instead of doing the studying. NextStep:
-	•	Gives you just one good choice
-	•	Learns from your past sessions
-	•	Helps prevent burnout by avoiding over-revision
-
-🧪 Roadmap (WIP)
-	•	Add subject subtopics
-	•	Introduce confidence decay
-	•	Dynamic quiz generation + grading (via AI)
-	•	Streamlit UI (web app version)
-	•	Import past JC/LC exam papers
-	•	Prediction model for “revision urgency”
+Or simply visit https://nextsteps.streamlit.app
 
  📁 File Structure
  .
