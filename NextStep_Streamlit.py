@@ -77,39 +77,6 @@ def get_days_since_last_session(subject):
     last_session = max(relevant_sessions)
     return (datetime.datetime.now() - last_session).days
 
-def get_ai_task_suggestion(subject, confidence, exam_days_left, energy, time_available):
-    from google import genai
-    client = genai.Client(api_key="YOUR_API_KEY")
-
-    prompt = f"""
-You are part of a study planning tool called NextStep.
-
-You are given context about a student's study needs and should return a specific study task they can do next. Be concise and task-oriented — not vague or motivational.
-
-Student context:
-- Subject: {subject}
-- Confidence (1–10): {confidence}
-- Days until exam: {exam_days_left}
-- Energy level: {energy}
-- Time available: {time_available} minutes
-
-Instructions:
-- Return only one single sentence with the most suitable next study task.
-- Make it match the subject and be realistic for the time/energy available.
-- Vary the task type (past papers, flashcards, teaching it aloud, reviewing notes, diagramming, summarising, etc.).
-- Be *specific* — e.g. "Do the 2023 short questions on cells" or "Review definitions using flashcards made last week".
-
-Now respond with the best task:
-    """
-
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt
-        )
-        return response.text.strip()
-    except Exception as e:
-        return f"⚠️ AI error: {e}"
 
 # --- Sidebar Navigation ---
 st.sidebar.title("NextStep Menu")
