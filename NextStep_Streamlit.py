@@ -111,7 +111,6 @@ Now respond with the best task:
     except Exception as e:
         return f"⚠️ AI error: {e}"
 
-
 # --- Sidebar Navigation ---
 st.sidebar.title("NextStep Menu")
 page = st.sidebar.radio("Go to", ["Dashboard", "Instant Mode", "Log a Session", "View Sessions", "Settings"])
