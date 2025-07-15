@@ -174,6 +174,7 @@ elif page == "Instant Mode":
             for subj, data in subjects.items():
                 days_left = (data["exam_date"] - today).days
                 urgency = 1 / max(days_left, 0.1)
+                
                 stored_conf = data["confidence"]
                 days_since = get_days_since_last_session(subj)
 
